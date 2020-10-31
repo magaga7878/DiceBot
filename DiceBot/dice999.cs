@@ -49,9 +49,9 @@ namespace DiceBot
             /*Thread tChat = new Thread(GetMessagesThread);
             tChat.Start();*/
             if (doge999)
-                SiteURL = "https://www.999doge.com/?20073598";
+                SiteURL = "https://www.999doge.com";
             else
-            SiteURL = "https://www.999dice.com/?20073598";
+            SiteURL = "https://www.999dice.com";
         }
 
         protected override void CurrencyChanged()
@@ -451,7 +451,7 @@ namespace DiceBot
                 Client.DefaultRequestHeaders.AcceptEncoding.Add(new System.Net.Http.Headers.StringWithQualityHeaderValue("deflate"));
                 List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
                 pairs.Add(new KeyValuePair<string, string>("a", "Login"));
-                pairs.Add(new KeyValuePair<string, string>("key", "7a3ada10cb804ec695cda315db6b8789"));
+                pairs.Add(new KeyValuePair<string, string>("key", "73bce594d38a460db610b33e02ba516f"));
                 if (twofa != "" && twofa != null)
                     pairs.Add(new KeyValuePair<string, string>("Totp", twofa));
 
@@ -537,7 +537,7 @@ namespace DiceBot
             Client.DefaultRequestHeaders.AcceptEncoding.Add(new System.Net.Http.Headers.StringWithQualityHeaderValue("deflate"));
             List<KeyValuePair<string, string>> pairs = new List<KeyValuePair<string, string>>();
             pairs.Add(new KeyValuePair<string, string>("a", "CreateAccount"));
-            pairs.Add(new KeyValuePair<string, string>("key", "7a3ada10cb804ec695cda315db6b8789"));
+            pairs.Add(new KeyValuePair<string, string>("key", "73bce594d38a460db610b33e02ba516f"));
             FormUrlEncodedContent Content = new FormUrlEncodedContent(pairs);
             string responseData = "";
             using (var response = Client.PostAsync("", Content))
@@ -562,7 +562,7 @@ namespace DiceBot
                 sessionCookie = tmp.SessionCookie;
                 pairs = new List<KeyValuePair<string, string>>();
                 pairs.Add(new KeyValuePair<string, string>("a", "CreateUser"));
-                pairs.Add(new KeyValuePair<string, string>("key", "7a3ada10cb804ec695cda315db6b8789"));
+                pairs.Add(new KeyValuePair<string, string>("key", "73bce594d38a460db610b33e02ba516f"));
                 pairs.Add(new KeyValuePair<string, string>("s", sessionCookie));
                 pairs.Add(new KeyValuePair<string, string>("Username", username));
                 pairs.Add(new KeyValuePair<string, string>("Password", password));
